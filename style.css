@@ -1,0 +1,102 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+.loader
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  perspective: 600px;
+}
+.loader span
+{
+  position: absolute;
+  border: 15px solid #262626;
+  border-radius: 10px;
+}
+
+.loader span::before
+{
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 15px;
+  height: 50%;
+  background: #ff0;
+  /*background: rgb(45, 245, 10);*/
+  /*background: whitesmoke;*/
+  /*background: linear-gradient(blue, aqua);*/
+}
+
+.loader span::after
+{
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  width: 15px;
+  height: 50%;
+  background: #ff0;
+  /*background: rgb(45, 245, 10);*/
+  /*background: whitesmoke;*/
+  /*background: linear-gradient(blue, aqua);*/
+}
+
+.loader span:nth-child(1)
+{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: animate 12s linear infinite;
+}
+.loader span:nth-child(2)
+{
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  animation: animate 6s linear infinite;
+}
+.loader span:nth-child(3)
+{
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  animation: animate 3s linear infinite;
+}
+.loader span:nth-child(4)
+{
+  top: 80px;
+  left: 80px;
+  right: 80px;
+  bottom: 80px;
+  animation: animate 1s linear infinite;
+}
+.loader span:nth-child(5)
+{
+  top: 120px;
+  left: 120px;
+  right: 120px;
+  bottom: 120px;
+  animation: animate 500ms linear infinite;
+}
+
+@keyframes animate
+{
+  0%
+  {
+    transform: rotateY(0deg);
+  }
+  100%
+  {
+    transform: rotateY(360deg);
+  }
+}
